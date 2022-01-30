@@ -1,9 +1,5 @@
-# WebGL with threejs
+# WebGL with threejs (and react)
 
-**https://salaadas.github.io/zofo/**
+I can't seem to set up threejs normally so I used react, hopefully it is better
 
-I still don't know what to do with this, my ideas are:
-
-- Sphere world snake game
-- 3d cube snake game
-- Fractal rendering (Mandlebrot set)
+I will make a music player
