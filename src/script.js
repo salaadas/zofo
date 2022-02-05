@@ -26,3 +26,9 @@ const solarSystem = new THREE.Group();
 solarSystem.add(sunMesh);
 
 test.scene.add(solarSystem);
+
+const spinning = () => {
+  sunMesh.rotation.y += 0.01;
+  window.requestAnimationFrame(spinning);
+};
+window.requestAnimationFrame(spinning);
