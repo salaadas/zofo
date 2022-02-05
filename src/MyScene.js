@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import Stats from 'three/examples/jsm/libs/stats.module.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import Stats from 'three/examples/jsm/libs/stats.module';
 
 export default class MyScene {
   constructor(fov = 36, camera, scene, stats, controls, renderer) {
@@ -19,7 +19,9 @@ export default class MyScene {
       1,
       1000
     );
-    this.camera.position.z = 128;
+    this.camera.position.z = 64;
+    this.camera.position.x = -90;
+    this.camera.position.y = 50;
 
     this.scene = new THREE.Scene();
 
