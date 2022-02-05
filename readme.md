@@ -2,6 +2,11 @@
 
 Making something in Threejs
 
+## Thank you brunosimon for the 3js template
+
+Original template taken from:
+https://github.com/brunosimon/threejs-template-simple
+
 ## Hosted at:
 
 not yet
