@@ -1,16 +1,33 @@
-# Three.js - Template - Simple
+# Third time the charm
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+Making something in Threejs
 
-``` bash
-# Install dependencies (only the first time)
-npm install
+## Hosted at:
 
-# Run the local server at localhost:8080
-npm run dev
+not yet
 
-# Build for production in the dist/ directory
-npm run build
+## Quick start:
+
+```bash
+# installing dependencies
+$ npm install
+
+# testing/development
+$ npm run dev
+
+# building/production
+$ npm run build
+```
+
+in case you use `Yarn`:
+
+```bash
+# installing dependencies
+$ yarn
+
+# testing/development
+$ yarn dev
+
+# building/production
+$ yarn build
 ```
