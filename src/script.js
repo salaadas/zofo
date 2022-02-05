@@ -6,8 +6,11 @@ const test = new MyScene();
 test.init();
 test.animate();
 
-const sunGeometry = new THREE.BoxGeometry(8, 8, 8);
-const sunMaterial = new THREE.MeshNormalMaterial();
+const sunGeometry = new THREE.SphereGeometry(8, 32, 64);
+const sunTexture = new THREE.TextureLoader().load('sun.jpg');
+const sunMaterial = new THREE.MeshBasicMaterial({
+  map: sunTexture,
+});
 /**
  * Mesh is like an object of things:
  * It needs:

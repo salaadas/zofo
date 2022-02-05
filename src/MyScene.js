@@ -37,7 +37,7 @@ export default class MyScene {
     this.stats = Stats();
     document.body.appendChild(this.stats.dom);
 
-    window.addEventListener('resize', this.handleResize, false);
+    window.addEventListener('resize', () => this.handleResize(), false);
   }
 
   animate() {
