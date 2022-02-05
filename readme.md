@@ -10,7 +10,7 @@ Making something in Threejs
 
 ## Hosted at:
 
-not yet
+https://zofo.vercel.app/
 
 ## Quick start:
 
