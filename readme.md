@@ -2,10 +2,11 @@
 
 Making something in Threejs
 
-## Thank you brunosimon for the 3js template
+## References:
 
-Original template taken from:
-https://github.com/brunosimon/threejs-template-simple
+- Original template taken from: https://github.com/brunosimon/threejs-template-simple
+- 3js tutorial: https://sbcode.net/threejs/scene-camera-renderer/
+- 3js docs: https://threejs.org/docs/
 
 ## Hosted at:
 
