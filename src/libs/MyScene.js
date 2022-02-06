@@ -26,7 +26,7 @@ export default class MyScene {
     this.scene = new THREE.Scene();
 
     this.renderer = new THREE.WebGLRenderer({
-      canvas: document.querySelector('canvas.webgl'),
+      canvas: document.querySelector('canvas.webgl'), // change if necessary
       antialias: true,
     });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -44,6 +44,7 @@ export default class MyScene {
     window.requestAnimationFrame(this.animate.bind(this));
     this.render();
     this.stats.update();
+    this.controls.update();
   }
 
   render() {
