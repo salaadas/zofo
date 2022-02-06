@@ -3,8 +3,8 @@ import * as THREE from 'three';
 export default class Tictactoe {
   constructor() {
     this.lineSize = {
-      depth: 8,
-      width: 8,
+      depth: 4,
+      width: 4,
       height: 64,
     };
     this.lineOffset = 12;
@@ -49,10 +49,13 @@ export default class Tictactoe {
 
   _createLine(width, height, depth, offsetX, offsetY) {
     const lineGeometry = new THREE.BoxGeometry(width, height, depth);
-    const lineMaterial = new THREE.MeshNormalMaterial();
+    const lineMaterial = new THREE.MeshNormalMaterial({ wireframe: true });
     const newLine = new THREE.Mesh(lineGeometry, lineMaterial);
     newLine.position.setX(offsetX);
     newLine.position.setY(offsetY);
+    newLine.scale.x = 0;
+    newLine.scale.y = 0;
+    newLine.scale.z = 0;
     return newLine;
   }
 }
