@@ -8,10 +8,14 @@ export default class Tictactoe {
       height: 64,
     };
     this.lineOffset = 12;
+
     this.board = new THREE.Group();
     this.lines = new THREE.Group();
+    this.hiddenTiles = new THREE.Group();
+
     this._createBoard();
     this.board.add(this.lines);
+    this.board.add(this.hiddenTiles);
   }
 
   _createBoard() {
@@ -45,6 +49,27 @@ export default class Tictactoe {
       -this.lineOffset
     );
     this.lines.add(left, right, up, down);
+
+    this.hiddenTiles.add(this._createHiddenTile(-24, 24));
+    this.hiddenTiles.add(this._createHiddenTile(0, 24));
+    this.hiddenTiles.add(this._createHiddenTile(24, 24));
+
+    this.hiddenTiles.add(this._createHiddenTile(-24, 0));
+    this.hiddenTiles.add(this._createHiddenTile(0, 0));
+    this.hiddenTiles.add(this._createHiddenTile(24, 0));
+
+    this.hiddenTiles.add(this._createHiddenTile(-24, -24));
+    this.hiddenTiles.add(this._createHiddenTile(0, -24));
+    this.hiddenTiles.add(this._createHiddenTile(24, -24));
+  }
+
+  _createHiddenTile(offsetX, offsetY) {
+    const tileGeometry = new THREE.BoxGeometry(12, 12, 1);
+    const tileMaterial = new THREE.MeshNormalMaterial({ wireframe: true });
+    const tile = new THREE.Mesh(tileGeometry, tileMaterial);
+    tile.position.setX(offsetX);
+    tile.position.setY(offsetY);
+    return tile;
   }
 
   _createLine(width, height, depth, offsetX, offsetY) {
